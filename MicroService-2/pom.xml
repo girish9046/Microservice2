@@ -40,14 +40,57 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		
+		<!-- Circuir Breaker -->
+		<dependency>
+			<groupId>io.pivotal.spring.cloud</groupId>
+			<artifactId>spring-cloud-services-starter-circuit-breaker
+			</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-hystrix-dashboard
+			</artifactId>
+		</dependency>
+		<!-- Circuir Breaker -->
+		
+		<!-- Sleuth for Distributed Tracing -->
+		<dependency>
+		    <groupId>org.springframework.cloud</groupId>
+		    <artifactId>spring-cloud-starter-sleuth</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.9</version>
+		</dependency>
+		<!-- Sleuth for Distributed Tracing -->
+		
+		<!-- Zipkin client registration for sleuth log files-->
+		<dependency>
+		    <groupId>org.springframework.cloud</groupId>
+		    <artifactId>spring-cloud-starter-zipkin</artifactId>
+		</dependency>
+		<!-- Zipkin client registration for sleuth log files-->
+		
 	</dependencies>
 
-	<dependencyManagement>
+		<dependencyManagement>
 		<dependencies>
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
 				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>io.pivotal.spring.cloud</groupId>
+				<artifactId>
+					spring-cloud-services-dependencies
+				</artifactId>
+				<version>2.2.3.RELEASE</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
