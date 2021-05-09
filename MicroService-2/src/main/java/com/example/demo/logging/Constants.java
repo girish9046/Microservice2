@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Constants {
-	public static final String LOG_FILE_PATH = "F:\\JOB_2020\\LOCAL\\logs\\";
+	public static final String LOG_FILE_PATH = "D:\\LOGS\\micro\\";
 	public static final String LOG_FILE_PATH_PROD = "../logs/";
 	public static final String LOG_FILE_FILE_EXT = ".log";
 	public static final String LOG_FILE_MAX_SIZE = "200MB";
